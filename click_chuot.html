@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="yasuo.jpg" style="position:absolute;left:500px; top:200px;" height="200" width="180"/>
+    <p style="margin-top: 200px; margin-left: 400px">Click button below to move the image to right</p>
+    <input style="margin-left: 400px" type="button"value="phải" onclick="moveRight()"/>
+    <input type="button"value="trái" onclick="moveleft()"/>
+</form>
+<script>
+    imgObj = document.getElementById('myImage');
+    function init() {
+        imgObj = document.getElementById('myImage');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '400px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+    function moveleft() {
+        imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+    }
+    window.onload = init;
+
+</script>
+</body>
+</html>
